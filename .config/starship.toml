@@ -1,0 +1,22 @@
+format = "  $directory$character"
+
+right_format = "$cmd_duration $time"
+
+add_newline = false
+
+[directory]
+style = "bold blue"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+[cmd_duration]
+min_time = 500
+format = " took [$duration](bold yellow)"
+
+[time]
+disabled = false
+time_format = "%d.%m.%Y %H:%M"
+format = "[ $time]($style)"
+style = "bold dimmed white"

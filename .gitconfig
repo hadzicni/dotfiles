@@ -1,0 +1,28 @@
+[user]
+    name = Nikola Hadzic
+    email = nikolahadzic7@icloud.com
+
+[init]
+    defaultBranch = main
+
+[core]
+    editor = nvim
+    autocrlf = input
+
+[pull]
+    rebase = true
+
+[push]
+    autoSetupRemote = true
+
+[fetch]
+    prune = true
+
+[merge]
+    conflictstyle = zdiff3
+
+[color]
+    ui = auto
+
+[rerere]
+    enabled = true
