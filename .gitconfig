@@ -1,6 +1,7 @@
 [user]
     name = Nikola Hadzic
     email = nikolahadzic7@icloud.com
+	signingkey = /Users/hadzicni/.ssh/id_ed25519.pub
 
 [init]
     defaultBranch = main
@@ -26,3 +27,9 @@
 
 [rerere]
     enabled = true
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
