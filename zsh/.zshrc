@@ -16,5 +16,21 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(starship init zsh)"
+eval "$(mise activate zsh)"
 
-export EDITOR="nvim"
+#Functions
+brewup() {
+  brew update || return
+  local outdated
+  outdated=$(brew outdated)
+  if [[ -z $outdated ]]; then
+    echo "Everything is up to date."
+  else
+    echo "$outdated"
+    read -q "REPLY?Run upgrade? [y/N] " || { echo; return; }
+    echo
+    brew upgrade || return
+  fi
+  brew autoremove
+  brew cleanup
+}
