@@ -1,4 +1,4 @@
-format = "  $directory$character"
+format = " $directory$git_branch$git_status$character"
 
 right_format = "$cmd_duration $time"
 
@@ -6,6 +6,14 @@ add_newline = false
 
 [directory]
 style = "bold blue"
+
+[git_branch]
+format = " [$symbol$branch]($style)"
+style = "bold purple"
+
+[git_status]
+format = "([ $all_status$ahead_behind]($style))"
+style = "bold red"
 
 [character]
 success_symbol = "[❯](bold green)"
@@ -18,5 +26,5 @@ format = " took [$duration](bold yellow)"
 [time]
 disabled = false
 time_format = "%d.%m.%Y %H:%M"
-format = "[ $time]($style)"
+format = "[ $time]($style)"
 style = "bold dimmed white"
