@@ -25,19 +25,18 @@
     { "type": "cpu", "key": "├─ \uf4bc CPU", "keyColor": "magenta" },
     { "type": "gpu", "key": "├─ \uf26c GPU", "keyColor": "magenta" },
     {
-      "type": "memory",
-      "key": "├─ \uf2db Memory",
-      "keyColor": "magenta",
-      "percent": { "type": 3, "green": 50, "yellow": 80 }
-    },
-    {
       "type": "disk",
       "key": "├─ \uf0a0 {mountpoint}",
       "keyColor": "magenta",
       "showReadOnly": false,
       "percent": { "type": 3, "green": 60, "yellow": 85 }
     },
-    { "type": "custom", "format": "{#35}╰─" },
+    {
+      "type": "memory",
+      "key": "╰─ \uf2db Memory",
+      "keyColor": "magenta",
+      "percent": { "type": 3, "green": 50, "yellow": 80 }
+    },
     "break",
 
     "colors"
