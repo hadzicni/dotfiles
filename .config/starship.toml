@@ -28,6 +28,7 @@ style = "gray"
 Macos = "\uf179"
 Ubuntu = "\uf31b"
 Debian = "\uf306"
+Arch = "\uf303"
 Linux = "\uf17c"
 
 [username]
