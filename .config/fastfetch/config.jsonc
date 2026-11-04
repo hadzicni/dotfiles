@@ -14,7 +14,6 @@
     { "type": "uptime",   "key": "╰─ \uf017 Uptime",   "keyColor": "blue" },
     "break",
 
-    // fällt unter WSL/headless weg
     { "type": "custom", "format": "{#32}╭─ Desktop" },
     { "type": "de",           "key": "├─ \uf2d0 DE",       "keyColor": "green" },
     { "type": "wm",           "key": "├─ \uf2d2 WM",       "keyColor": "green" },
