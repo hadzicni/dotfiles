@@ -1,42 +1,42 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-  "logo": {
-    "padding": { "top": 1, "left": 2, "right": 4 }
-  },
-  "display": {
-    "separator": "  ",
-    "key": { "width": 16 }
-  },
+  "logo": { "padding": { "top": 1, "left": 2, "right": 4 } },
+  "display": { "separator": "  ", "key": { "width": 16 } },
   "modules": [
-    "break",
-    "title",
-    "break",
+    "break", "title", "break",
 
     { "type": "custom", "format": "{#34}╭─ System" },
     { "type": "os",       "key": "├─ \uf108 OS",       "keyColor": "blue" },
+    { "type": "host",     "key": "├─ \uf109 Host",     "keyColor": "blue" },
     { "type": "kernel",   "key": "├─ \uf013 Kernel",   "keyColor": "blue" },
-    { "type": "uptime",   "key": "├─ \uf017 Uptime",   "keyColor": "blue" },
     { "type": "packages", "key": "├─ \uf487 Packages", "keyColor": "blue" },
     { "type": "shell",    "key": "├─ \uf489 Shell",    "keyColor": "blue" },
-    { "type": "terminal", "key": "╰─ \uf120 Terminal", "keyColor": "blue" },
+    { "type": "uptime",   "key": "╰─ \uf017 Uptime",   "keyColor": "blue" },
+    "break",
+
+    // fällt unter WSL/headless weg
+    { "type": "custom", "format": "{#32}╭─ Desktop" },
+    { "type": "de",           "key": "├─ \uf2d0 DE",       "keyColor": "green" },
+    { "type": "wm",           "key": "├─ \uf2d2 WM",       "keyColor": "green" },
+    { "type": "display",      "key": "├─ \uf26c Display",  "keyColor": "green" },
+    { "type": "terminalfont", "key": "├─ \uf031 Font",     "keyColor": "green" },
+    { "type": "terminal",     "key": "╰─ \uf120 Terminal", "keyColor": "green" },
     "break",
 
     { "type": "custom", "format": "{#35}╭─ Hardware" },
     { "type": "cpu", "key": "├─ \uf4bc CPU", "keyColor": "magenta" },
     { "type": "gpu", "key": "├─ \uf26c GPU", "keyColor": "magenta" },
-    {
-      "type": "disk",
-      "key": "├─ \uf0a0 {mountpoint}",
-      "keyColor": "magenta",
-      "showReadOnly": false,
-      "percent": { "type": 3, "green": 60, "yellow": 85 }
-    },
-    {
-      "type": "memory",
-      "key": "╰─ \uf2db Memory",
-      "keyColor": "magenta",
-      "percent": { "type": 3, "green": 50, "yellow": 80 }
-    },
+    { "type": "disk", "key": "├─ \uf0a0 {mountpoint}", "keyColor": "magenta",
+      "showReadOnly": false, "percent": { "type": 3, "green": 60, "yellow": 85 } },
+    { "type": "battery", "key": "├─ \uf240 Battery", "keyColor": "magenta" },
+    { "type": "swap",    "key": "├─ \uf2db Swap",    "keyColor": "magenta",
+      "percent": { "type": 3, "green": 50, "yellow": 80 } },
+    { "type": "memory",  "key": "╰─ \uf2db Memory",  "keyColor": "magenta",
+      "percent": { "type": 3, "green": 50, "yellow": 80 } },
+    "break",
+
+    { "type": "custom", "format": "{#36}╭─ Network" },
+    { "type": "localip", "key": "╰─ \uf6ff Local IP", "keyColor": "cyan", "showIpv6": false },
     "break",
 
     "colors"
